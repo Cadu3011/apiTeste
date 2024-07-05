@@ -5,7 +5,7 @@ import cors  from 'cors';
 const app = express()
 app.use(express.json())
 
-/*const allowedOrigins = [
+const allowedOrigins = [
     'http://localhost:5173' // A porta do seu frontend
   ];
   
@@ -18,8 +18,7 @@ app.use(express.json())
       }
     }
   };
- */ 
-  app.use(cors(/*corsOptions*/));
+  app.use(cors(corsOptions));
   let filiais 
 
 app.get('/filiais',async(req,res)=>{
